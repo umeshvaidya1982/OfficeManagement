@@ -7,7 +7,7 @@ from datetime import datetime
 import os
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask(newapp)
 app.config['SECRET_KEY'] = '123456'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///office.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -264,5 +264,5 @@ def alc_upload_activity():
     flash('Activity uploaded successfully')
     return redirect(url_for('alc_dashboard'))
 
-if __name__ == '__name__':
+if newapp == 'newapp':
     app.run(debug=True, host='0.0.0.0', port=5000)
