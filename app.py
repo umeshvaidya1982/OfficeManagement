@@ -264,5 +264,5 @@ def alc_upload_activity():
     flash('Activity uploaded successfully')
     return redirect(url_for('alc_dashboard'))
 
-if newapp == 'newapp':
+if app == 'newapp':
     app.run(debug=True, host='0.0.0.0', port=5000)
